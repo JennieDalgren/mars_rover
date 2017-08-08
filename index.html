@@ -1,9 +1,26 @@
+<!DOCTYPE>
 <html>
 <head>
 	<title>Mars Rover Kata!</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="rover.js"></script>
 </head>
 <body>
+	<h1>This is the coolest Mars Rover ever excisted!</h1>
 
+	<img src="rover1.png" id="therover" class="north"/>
+
+
+	<button onclick="turnRight(rover)">Turn Right</button>
+	<button onclick="turnLeft(rover)">Turn Left</button>
+	<button onclick="positionMsg(rover);">Check Position</button>
+	<button onclick="goForward(rover);">Move Forward</button>
+	<button onclick="goBackward(rover);">Move Backward</button>
+
+
+
+	<p id="msg"></p>
+	<p id="pos"></p>
 </body>
 </html>
