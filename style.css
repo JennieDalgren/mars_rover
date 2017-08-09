@@ -1,4 +1,31 @@
-/*STYLING GOES HERE*/
+body {
+  font-family: monospace;
+  color: #E36545;
+  background-image: url("stars.jpg");
+  background-size: cover;
+}
+
+
+h1 {
+  font-size: 3em;
+  margin-top: 3em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+
+.controls {
+  display: inline-block;
+  margin: auto;
+}
+
+
 .north {
    transform: rotate(0deg);
 }

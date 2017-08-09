@@ -20,7 +20,7 @@ function turnRight(rover) {
     case 'N':
       rover.direction ='E';
       document.getElementById("pos").innerHTML = "Turning Right and is now facing EAST";
-      document.getElementById("therover").className = "east";
+      document.getElementById("therover").className = "east"; //to change the image class and make it rotate
       break;
     case 'E':
       rover.direction ='S';
@@ -69,16 +69,40 @@ function turnLeft(rover) {
 function goForward(rover) {
   switch(rover.direction) {
     case 'N':
+    if (rover.position[1]>=10) {
+      document.getElementById("pos").innerHTML = "Oops, you're you cant move more north.";
+      rover.poisiton[1]=10;
+    }
+    else {
       rover.position[1]++;
+    }
       break;
     case 'E':
+    if (rover.position[0]>=10) {
+      document.getElementById("pos").innerHTML = "Oops, you're you cant move more east.";
+      rover.poisiton[0]=10;
+    }
+    else {
       rover.position[0]++;
+    }
       break;
     case 'S':
+    if (rover.position[1]<=0) {
+      document.getElementById("pos").innerHTML = "Oops, you're you cant move more south.";
+      rover.poisiton[1]=0;
+    }
+    else {
       rover.position[1]--;
+    }
       break;
     case 'W':
+    if (rover.position[0]<=0) {
+      document.getElementById("pos").innerHTML = "Oops, you're you cant move more west.";
+      rover.poisiton[0]=0;
+    }
+    else {
       rover.position[0]--;
+    }
       break;
   }
   document.getElementById("pos").innerHTML = "New Rover Position: [" + rover.position[0] + ", " + rover.position[1] + "]";
@@ -87,16 +111,40 @@ function goForward(rover) {
 function goBackward(rover) {
   switch(rover.direction) {
     case 'N':
-      rover.position[1]--;
+      if (rover.position[1]<=0) {
+        document.getElementById("pos").innerHTML = "Oops, you're you cant move more south.";
+        rover.poisiton[1]=0;
+      }
+      else {
+        rover.position[1]--;
+      }
       break;
     case 'E':
+    if (rover.position[0]<=0) {
+      document.getElementById("pos").innerHTML = "Oops, you're you cant move more west.";
+      rover.poisiton[0]=0;
+    }
+    else {
       rover.position[0]--;
+    }
       break;
     case 'S':
+    if (rover.position[1]>=10) {
+      document.getElementById("pos").innerHTML = "Oops, you're you cant move more north.";
+      rover.poisiton[1]=10;
+    }
+    else {
       rover.position[1]++;
+    }
       break;
     case 'W':
+    if (rover.position[0]>=10) {
+      document.getElementById("pos").innerHTML = "Oops, you're you cant move more east.";
+      rover.poisiton[0]=10;
+    }
+    else {
       rover.position[0]++;
+    }
       break;
   }
   document.getElementById("pos").innerHTML = "New Rover Position: [" + rover.position[0] + ", " + rover.position[1] + "]";
