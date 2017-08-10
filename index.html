@@ -7,20 +7,27 @@
 	<script type="text/javascript" src="rover.js"></script>
 </head>
 <body>
-	<h1>This is the coolest Mars Rover ever excisted!</h1>
+	<h1>This is the coolest Mars Rover ever existed!</h1>
+	<main>
+		<img src="rover1.png" id="therover" class="north"/>
+		<div id="test"><ul></ul></div>
+	</main>
 
-	<img src="rover1.png" id="therover" class="north"/>
+	<input type="text" id="controlInput" placeholder="move with F, B, L, R"/>
 
 	<footer class="controls">
-	<button onclick="turnLeft(rover)">Turn Left</button>
-	<button onclick="turnRight(rover)">Turn Right</button>
-	<button onclick="positionMsg(rover);">Check Position</button>
-	<button onclick="goForward(rover);">Move Forward</button>
-	<button onclick="goBackward(rover);">Move Backward</button>
+		<button onclick="control(rover)">GO</button>
+		<!-- <button onclick="turnLeft(rover)">Turn Left</button>
+		<button onclick="turnRight(rover)">Turn Right</button> -->
+		<button onclick="positionMsg(rover);">Get Position</button>
+		<!-- <button onclick="goForward(rover);">Move Forward</button>
+		<button onclick="goBackward(rover);">Move Backward</button> -->
 	</footer>
 
-
 	<p id="msg"></p>
-	<p id="pos"></p>
+	<p id="encounter"></p>
+
+
+
 </body>
 </html>

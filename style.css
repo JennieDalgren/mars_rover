@@ -1,6 +1,6 @@
 body {
   font-family: monospace;
-  color: #E36545;
+  color: #F9A742;
   background-image: url("stars.jpg");
   background-size: cover;
 }
@@ -8,24 +8,91 @@ body {
 
 h1 {
   font-size: 3em;
-  margin-top: 3em;
-  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
   text-align: center;
   text-shadow: 2px 2px black;
+  font-style:
+}
+
+p {
+font-size: 2em;
+text-align: center;
+text-shadow: 2px 2px black;
+}
+
+main {
+  display: flex;
+  justify-content:center;
+  margin-bottom: 1em;
 }
 
 img {
-  display: block;
-  margin: auto;
+  display: inline-block;
+
 }
 
+#test {
+  width: 150px;
+  padding: 6px;
+  background-color: rgba(0,0,0,0.5);
+  margin-left: 1em;
+  display: inline-block;
+  list-style: none;
+  font-size: 12px;
+  text-align: right;
+
+}
 
 .controls {
-  display: inline-block;
+  margin-top: 1em;
+  display: flex;
+  justify-content:center;
+}
+input {
+  display: block;
   margin: auto;
+  padding: 1em;
+  font-size: 16px;
+  background-color: black;
+  color: #F9A742;
+  font-family: monospace;
+  border: none;
+  width: 330px;
+
+}
+
+button {
+  margin: 1em;
+  padding: 1em 0;
+  width: 150px;
+  background-color: #F9A742;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  /*transition-duration: 0.4s;*/
+  border: 2px solid transparent;
+  box-shadow: 3px 3px black;
+}
+
+button:hover {
+  border: 2px solid #F9A742;
+  background-color: transparent;
+  color: #F9A742;
+  text-shadow: 2px 2px black;
+}
+
+button:focus {
+  border: 2px solid #F9A742;
+  background-color: transparent;
+  color: #F9A742;
+  text-shadow: 2px 2px black;
+  outline: none;
 }
 
 
+
+/*different classes for the image to rotate it in the direction that the rover points.*/
 .north {
    transform: rotate(0deg);
 }
